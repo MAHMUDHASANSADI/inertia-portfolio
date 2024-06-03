@@ -1,22 +1,24 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import image1 from '../../../../public/images/updated (1).png';
+import image2 from '../../../../public/images/updated (1).png';
+import image3 from '../../../../public/images/updated (1).png';
 const RecentWork = () => {
     const projects = [
         {
             title: 'Project One',
             description: 'Description of project one.',
-            imageUrl: 'https://via.placeholder.com/300x200',
+            imageUrl: image1,
         },
         {
             title: 'Project Two',
             description: 'Description of project two.',
-            imageUrl: 'https://via.placeholder.com/300x200',
+            imageUrl: image2,
         },
         {
             title: 'Project Three',
             description: 'Description of project three.',
-            imageUrl: 'https://via.placeholder.com/300x200',
+            imageUrl: image3,
         },
     ];
 

@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import Navbar from './components/Navbar';
 import Slider from './components/Slider';
@@ -19,6 +17,7 @@ const Home = () => {
             <RecentWork />
             <div className=' pb-5'><Contact /></div>
             <Footer />
+
         </div>
     );
 };

@@ -28,9 +28,11 @@ Route::get('/', function () {
 Route::get('/biography/profile', function () {
     return Inertia::render('Profile');
 });
+Route::get('product', [ProductController::class, 'index'])->name('product.index');
+
 
 Route::get('/biography/social-involvement', function () {
-    return Inertia::render('Social Involvement');
+    return Inertia::render('SocialInvolvement');
 });
 
 Route::get('/biography/vision', function () {
@@ -38,19 +40,15 @@ Route::get('/biography/vision', function () {
 });
 
 Route::get('/businessActivity/bizzSolution', function () {
-    return Inertia::render('Bizz Solution');
+    return Inertia::render('BizzSolutionPlc');
 });
 
-Route::get('/businessActivity/caFirm', function () {
+Route::get('/businessActivity/firm', function () {
     return Inertia::render('Firm');
 });
 
 Route::get('/businessActivity/training', function () {
-    return Inertia::render('Firm');
-});
-
-Route::get('/businessActivity/caFirm', function () {
-    return Inertia::render('Firm');
+    return Inertia::render('Taining');
 });
 
 Route::get('/award/private', function () {
@@ -62,7 +60,7 @@ Route::get('/award/govt', function () {
 });
 
 Route::get('/news/blog', function () {
-    return Inertia::render('blog');
+    return Inertia::render('Blog');
 });
 
 Route::get('/live', function () {
