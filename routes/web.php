@@ -26,9 +26,11 @@ Route::get('/businessActivity/firm', [BusinessActivityController::class, 'firm']
 Route::get('/businessActivity/training', [BusinessActivityController::class, 'training'])->name('training');
 Route::get('/award/govt', [AwardController::class, 'govt'])->name('govt');
 Route::get('/award/private', [AwardController::class, 'private'])->name('private');
+Route::get('/news/blog', [AwardController::class, 'blog'])->name('blog');
 
-Route::get('/biography/profile', [NavProfileController::class, 'show'])->name('biography.profile');
-Route::get('/biography/profile', [NavProfileController::class, 'show'])->name('biography.profile');
+
+// Route::get('/biography/profile', [NavProfileController::class, 'show'])->name('biography.profile');
+// Route::get('/biography/profile', [NavProfileController::class, 'show'])->name('biography.profile');
 
 
 // Route::get('/biography/profile', function () {
