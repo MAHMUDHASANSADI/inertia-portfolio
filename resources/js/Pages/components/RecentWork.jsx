@@ -24,7 +24,7 @@ const RecentWork = () => {
 
     return (
         <div id="recent-work" className="container mt-5">
-            <h2 className="text-center mb-4">Recent Work</h2>
+            <h2 className="text-center mb-4">Activities</h2>
             <div className="row">
                 {projects.map((project, index) => (
                     <div className="col-md-4 mb-4" key={index}>

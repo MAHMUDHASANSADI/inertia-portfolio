@@ -8,7 +8,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-dark ">
             <div className="container container-fluid ">
 
-                <a className="navbar-brand text-white" href="#">Md. <span className='text-secondary'>Shafiqul</span> Alam</a>
+                <a className="navbar-brand text-white" href={route('home')}>Md. <span className='text-secondary'>Shafiqul</span> Alam</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
