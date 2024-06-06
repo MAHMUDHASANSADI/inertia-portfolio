@@ -3,20 +3,16 @@
 use App\Http\Controllers\NavProfileController;
 use App\Http\Controllers\BusinessActivityController;
 use App\Http\Controllers\AwardController;
+use App\Http\Controllers\LiveController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 
-Route::get('/', function () {
-    return Inertia::render('Home', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::get('/',[HomeController::class,'home'])->name('home');
 
 Route::get('/biography/profile', [NavProfileController::class, 'profile'])->name('biography.profile');
 Route::get('/biography/social-involvement', [NavProfileController::class, 'socialInvolvement'])->name('biography.social-involvement');
@@ -26,7 +22,10 @@ Route::get('/businessActivity/firm', [BusinessActivityController::class, 'firm']
 Route::get('/businessActivity/training', [BusinessActivityController::class, 'training'])->name('training');
 Route::get('/award/govt', [AwardController::class, 'govt'])->name('govt');
 Route::get('/award/private', [AwardController::class, 'private'])->name('private');
-Route::get('/news/blog', [AwardController::class, 'blog'])->name('blog');
+Route::get('/news/blog', [NewsController::class, 'blog'])->name('blog');
+Route::get('/live/news24', [LiveController::class, 'news'])->name('news');
+Route::get('/live/independence', [LiveController::class, 'independence'])->name('independence');
+Route::get('/live/gtv', [LiveController::class, 'gtv'])->name('gtv');
 
 
 // Route::get('/biography/profile', [NavProfileController::class, 'show'])->name('biography.profile');

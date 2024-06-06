@@ -16,7 +16,7 @@ const Navbar = () => {
                     <div className="" id="navbarNavDropdown ">
                         <ul className="navbar-nav">
                             <li className="nav-item dropdown">
-                                <a className="nav-link text-white active a" aria-current="page" href="">Home</a>
+                                <a className="nav-link text-white active a" aria-current="page" href={route('home')}>Home</a>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link text-white dropdown-togglec a" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -61,9 +61,9 @@ const Navbar = () => {
                                     Live TV show
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a className="dropdown-item" href="#">News 24</a></li>
-                                    <li><a className="dropdown-item" href="#">Independence TV</a></li>
-                                    <li><a className="dropdown-item" href="#">G TV</a></li>
+                                    <li><a className="dropdown-item" href={route('news')}>News 24</a></li>
+                                    <li><a className="dropdown-item" href={route('independence')}>Independence TV</a></li>
+                                    <li><a className="dropdown-item" href={route('gtv')}>G TV</a></li>
                                 </ul>
                             </li>
                             <li>
