@@ -1,3 +1,4 @@
+import React from 'react';
 import './bootstrap';
 import '../css/app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -6,8 +7,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';
+import { InertiaApp } from '@inertiajs/inertia-react';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 
+// InertiaProgress.init();
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({

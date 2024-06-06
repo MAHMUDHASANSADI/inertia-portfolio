@@ -29,7 +29,7 @@
     max-height: 600px;
     /* Adjust this value as needed */
 
-    width: 100%;
+    width: 100% !important;
     /* Ensures the image spans the full width of the carousel */
 }
 

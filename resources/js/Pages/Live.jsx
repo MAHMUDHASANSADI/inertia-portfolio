@@ -41,7 +41,7 @@ const Live = () => {
     }, []);
 
     return (
-        <div className="container tv-container">
+        <div className="tv-container">
             <div>
                 <Navbar />
             </div>
