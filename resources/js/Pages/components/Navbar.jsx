@@ -48,11 +48,11 @@ const Navbar = () => {
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
-                                <a className="nav-link text-white dropdown-toggle a" href={route('blog')} id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a className="nav-link text-white dropdown-toggle a" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     News Coverage
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a className="dropdown-item text-dark" href="#">Blog</a></li>
+                                    <li><a className="dropdown-item text-dark" href={route('blog')}>Blog</a></li>
 
                                 </ul>
                             </li>
