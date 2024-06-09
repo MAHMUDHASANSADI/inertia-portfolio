@@ -18,14 +18,29 @@ const Blog = () => {
             <section >
                 <Container>
                     <Row>
+                        <Col>
+                            <BlogCard
+                                image={blog1}
+                                title={"sasasasa"}
+                                text={"sasasasas"}
+                                button={'dfdfd'}
+
+                            />
+                        </Col>
+
                         <BlogCard
                             image={blog1}
                             title={"sasasasa"}
                             text={"sasasasas"}
-                            button={'dfdfd'}
 
                         />
 
+                        <BlogCard
+                            image={blog1}
+                            title={"sasasasa"}
+                            text={"sasasasas"}
+
+                        />
                         <BlogCard
                             image={blog1}
                             title={"sasasasa"}
@@ -35,6 +50,8 @@ const Blog = () => {
 
 
                     </Row>
+
+
                 </Container>
             </section>
 
