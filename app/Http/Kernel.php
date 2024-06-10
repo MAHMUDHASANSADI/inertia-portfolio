@@ -69,5 +69,6 @@ class Kernel extends HttpKernel
         'web' => [
             \App\Http\Middleware\HandleInertiaRequests::class,
         ],
+        'admin' => \App\Http\Middleware\AdminMiddleware::class,
     ];
 }

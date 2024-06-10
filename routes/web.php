@@ -7,6 +7,10 @@ use App\Http\Controllers\LiveController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -27,54 +31,6 @@ Route::get('/live/news24', [LiveController::class, 'news'])->name('news');
 Route::get('/live/independence', [LiveController::class, 'independence'])->name('independence');
 Route::get('/live/gtv', [LiveController::class, 'gtv'])->name('gtv');
 
-
-// Route::get('/biography/profile', [NavProfileController::class, 'show'])->name('biography.profile');
-// Route::get('/biography/profile', [NavProfileController::class, 'show'])->name('biography.profile');
-
-
-// Route::get('/biography/profile', function () {
-//     return Inertia::render('Profile');
-// });
-
-// Route::get('product', [ProductController::class, 'index'])->name('product.index');
-
-
-// Route::get('/biography/social-involvement', function () {
-//     return Inertia::render('SocialInvolvement');
-// });
-
-// Route::get('/biography/vision', function () {
-//     return Inertia::render('Vision');
-// });
-
-// Route::get('', function () {
-//     return Inertia::render('BizzSolutionPlc');
-// });
-
-// Route::get('/businessActivity/firm', function () {
-//     return Inertia::render('Firm');
-// });
-
-// Route::get('/businessActivity/training', function () {
-//     return Inertia::render('Taining');
-// });
-
-// Route::get('/award/private', function () {
-//     return Inertia::render('Private');
-// });
-
-// Route::get('/award/govt', function () {
-//     return Inertia::render('Govt');
-// });
-
-// Route::get('/news/blog', function () {
-//     return Inertia::render('Blog');
-// });
-
-// Route::get('/live', function () {
-//     return Inertia::render('Live');
-// });
-
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -86,3 +42,35 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+//admin dashboard
+
+Route::get('admin',[AuthController::class,'admin_login']);
+Route::post('admin',[AuthController::class,'auth_admin_login']);
+Route::get('admin/logout',[AuthController::class,'admin_logout']);
+
+
+
+Route::group(['middleware' => 'admin'],function(){
+    Route::get('admin/dashboard',[DashboardController::class,'dashboard']);
+    Route::get('admin/admin/list',[AdminController::class,'list']);
+    Route::get('admin/admin/add',[AdminController::class,'add']);
+    Route::post('admin/admin/add',[AdminController::class,'insert']);
+    Route::get('admin/admin/edit/{id}',[AdminController::class,'edit']);
+    Route::post('admin/admin/edit/{id}',[AdminController::class,'update']);
+    Route::get('admin/admin/delete/{id}',[AdminController::class,'delete']);
+
+    Route::get('admin/category/list',[CategoryController::class,'list']);
+    Route::get('admin/category/add',[CategoryController::class,'add']);
+    Route::post('admin/category/add',[CategoryController::class,'insert']);
+    Route::get('admin/category/edit/{id}',[CategoryController::class,'edit']);
+    Route::post('admin/category/edit/{id}',[CategoryController::class,'update']);
+    Route::get('admin/category/delete/{id}',[CategoryController::class,'delete']);
+
+    Route::get('admin/slider/list',[HomeController::class,'list']);
+    Route::get('admin/slider/add',[HomeController::class,'add']);
+    Route::post('admin/slider/add',[HomeController::class,'insert']);
+    Route::get('admin/slider/edit/{id}',[HomeController::class,'edit']);
+    Route::post('admin/slider/edit/{id}',[HomeController::class,'update']);
+    Route::get('admin/slider/delete/{id}',[HomeController::class,'delete']);
+});
