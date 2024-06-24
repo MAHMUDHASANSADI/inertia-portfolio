@@ -11,7 +11,7 @@ const Blog = () => {
             <section>
                 <Navbar />
             </section>
-            <section className='text-center bg-primary'>
+            <section className='text-center bg-primary title'>
                 <h1>Blog</h1>
             </section>
 

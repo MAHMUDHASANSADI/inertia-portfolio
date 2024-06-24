@@ -7,10 +7,10 @@ const BizzSolutionPlc = () => {
             <section>
                 <MainNav />
             </section>
-            <section className='text-center bg-secondary'>
+            <section className='text-center bg-secondary title'>
                 <h1>Bizz Solutions PLC</h1>
             </section>
-            <section>
+            <section className='title'>
                 <ul>
                     <li><p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nobis ullam dolore eaque id enim obcaecati, repellendus, odit quae deleniti voluptatibus iusto quos eveniet? Natus nobis cum porro velit ducimus!</p>
                     </li>
